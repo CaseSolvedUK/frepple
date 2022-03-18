@@ -24,10 +24,10 @@ import os
 mod = Extension(
   'frepple',
   sources=['pythonextension.cpp'],
-  include_dirs=["../include"],
+  include_dirs=["../include", "../build/include"],
   define_macros=[("HAVE_LOCALTIME_R","1")],
   libraries=['frepple', 'xerces-c'],
-  extra_compile_args=['-std=c++0x'],
+  extra_compile_args=['-std=c++14'],
   library_dirs=[os.environ['LIB_DIR']]
   )
 
